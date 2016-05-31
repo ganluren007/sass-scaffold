@@ -1,0 +1,153 @@
+//background-position with image
+@mixin bpImage($width, $height, $x, $y){
+	width: $width;
+	height: $height;
+	@if $x == 0 and $y == 0{
+		background-position: 0 0;
+	}
+	@else if $x == 0 and $y != 0{
+		background-position: 0 $y;
+	}
+	@else if $x != 0 and $y == 0{
+		background-position: $x 0;
+	}
+	@else{
+		background-position: $x $y;
+	}
+}
+
+//background-position without image
+@mixin bp($width,$height,$x,$y){
+	width: $width;
+	height: $height;
+	@if $x == 0 and $y == 0{
+		background-position: 0 0;
+	}
+	@else if $x == 0 and $y != 0{
+		background-position: 0 $y;
+	}
+	@else if $x != 0 and $y == 0{
+		background-position: $x 0;
+	}
+	@else{
+		background-position: $x $y;
+	}
+}
+
+//text center and middle
+@mixin text-center($width, $height, $display: null){
+	display: $display;
+	width: $width;
+	height: $height;
+	text-align: center;
+	line-height: $height;
+}
+
+//block center and middle
+@mixin block-center(){
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+//css3 transform
+@mixin transform($action){
+	transform: $action;
+	-ms-transform: $action;
+	-webkit-transform: $action;
+	-o-transform: $action;
+	-moz-transform: $action;
+}
+
+//css3 transition
+@mixin transition($action...){
+	transition: $action;
+	-moz-transition: $action;
+	-webkit-transition: $action;
+	-o-transition: $action;
+}
+
+//css3 keyframes
+@mixin keyframes($name){
+	@keyframes #{$name}{
+		@content;
+	}
+	@-webkit-keyframes #{$name}{
+		@content;
+	}
+	@-moz-keyframes #{$name}{
+		@content;
+	}
+	@-o-keyframes #{$name}{
+		@content;
+	}
+}
+
+//css3 animation
+@mixin animate($action){
+	animation: $action;
+	-moz-animation: $action;
+	-webkit-animation: $action;
+	-o-animation: $action;
+}
+
+//opacity
+@mixin opacity($n){
+	filter: Alpha(opacity = $n);
+	opacity: $n / 100;
+}
+
+//writing mode: vertical
+@mixin writing-mode($str){
+	-webkit-writing-mode: vertical-#{$str};
+	-moz-writing-mode: vertical-#{$str};
+	-o-writing-mode: vertical-#{$str};
+	writing-mode: vertical-#{$str};
+}
+
+//inline block
+@mixin inline-block(){
+	display: inline-block;
+	@if($lte7){
+		*display:inline;
+		*zoom:1;
+	}
+}
+
+//text overflow: ellipsis
+@mixin text-overflow(){
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// triangle
+@mixin triangle($direction, $size, $borderColor ) {
+  content:"";
+  height: 0;
+  width: 0;
+  overflow:hidden;
+  @if $direction == top {
+    border-bottom:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  } 
+  @else if $direction == right {
+    border-left:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  } 
+  @else if $direction == bottom {
+    border-top:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  } 
+  @else if $direction == left {
+    border-right:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  }
+}

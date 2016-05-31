@@ -1,0 +1,35 @@
+/* base css */
+body{
+  margin: 0 auto;
+  font: 14px/1.5 "microsoft yahei", Arial, sans-serif;
+  color: #666;
+  background: #fff;
+}
+
+.wrapper{
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.clearfix{
+  @if $lte7{
+    *zoom: 1;
+  }
+
+  &:after{
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: "";
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
