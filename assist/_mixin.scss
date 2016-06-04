@@ -53,61 +53,6 @@
 	margin: auto;
 }
 
-//css3 transform
-@mixin transform($action){
-	transform: $action;
-	-ms-transform: $action;
-	-webkit-transform: $action;
-	-o-transform: $action;
-	-moz-transform: $action;
-}
-
-//css3 transition
-@mixin transition($action...){
-	transition: $action;
-	-moz-transition: $action;
-	-webkit-transition: $action;
-	-o-transition: $action;
-}
-
-//css3 keyframes
-@mixin keyframes($name){
-	@keyframes #{$name}{
-		@content;
-	}
-	@-webkit-keyframes #{$name}{
-		@content;
-	}
-	@-moz-keyframes #{$name}{
-		@content;
-	}
-	@-o-keyframes #{$name}{
-		@content;
-	}
-}
-
-//css3 animation
-@mixin animate($action){
-	animation: $action;
-	-moz-animation: $action;
-	-webkit-animation: $action;
-	-o-animation: $action;
-}
-
-//opacity
-@mixin opacity($n){
-	filter: Alpha(opacity = $n);
-	opacity: $n / 100;
-}
-
-//writing mode: vertical
-@mixin writing-mode($str){
-	-webkit-writing-mode: vertical-#{$str};
-	-moz-writing-mode: vertical-#{$str};
-	-o-writing-mode: vertical-#{$str};
-	writing-mode: vertical-#{$str};
-}
-
 //inline block
 @mixin inline-block(){
 	display: inline-block;
@@ -115,13 +60,6 @@
 		*display:inline;
 		*zoom:1;
 	}
-}
-
-//text overflow: ellipsis
-@mixin text-overflow(){
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
 // triangle
@@ -132,22 +70,22 @@
   overflow:hidden;
   @if $direction == top {
     border-bottom:$size solid $borderColor;
-    border-left:$size dashed transparent;
-    border-right:$size dashed transparent;
-  } 
+    border-left:$size solid transparent;
+    border-right:$size solid transparent;
+  }
   @else if $direction == right {
     border-left:$size solid $borderColor;
-    border-top:$size dashed transparent;
-    border-bottom:$size dashed transparent;
-  } 
+    border-top:$size solid transparent;
+    border-bottom:$size solid transparent;
+  }
   @else if $direction == bottom {
     border-top:$size solid $borderColor;
-    border-left:$size dashed transparent;
-    border-right:$size dashed transparent;
-  } 
+    border-left:$size solid transparent;
+    border-right:$size solid transparent;
+  }
   @else if $direction == left {
     border-right:$size solid $borderColor;
-    border-top:$size dashed transparent;
-    border-bottom:$size dashed transparent;
+    border-top:$size solid transparent;
+    border-bottom:$size solid transparent;
   }
 }
