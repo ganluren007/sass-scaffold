@@ -1,4 +1,4 @@
-//css3 transform
+//transform
 @mixin transform($action){
   transform: $action;
   -ms-transform: $action;
@@ -7,7 +7,7 @@
   -moz-transform: $action;
 }
 
-//css3 transition
+//transition
 @mixin transition($action...){
   transition: $action;
   -moz-transition: $action;
@@ -15,7 +15,7 @@
   -o-transition: $action;
 }
 
-//css3 keyframes
+//animation keyframes
 @mixin keyframes($name){
   @keyframes #{$name}{
     @content;
@@ -31,7 +31,7 @@
   }
 }
 
-//css3 animation
+//animation
 @mixin animate($action){
   animation: $action;
   -moz-animation: $action;
@@ -45,16 +45,8 @@
   opacity: $n / 100;
 }
 
-//writing mode: vertical
-@mixin writing-mode($str){
-  -webkit-writing-mode: vertical-#{$str};
-  -moz-writing-mode: vertical-#{$str};
-  -o-writing-mode: vertical-#{$str};
-  writing-mode: vertical-#{$str};
-}
-
 //text overflow: ellipsis
-@mixin text-overflow(){
+%text-overflow{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

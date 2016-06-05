@@ -44,7 +44,7 @@
 }
 
 //block center and middle
-@mixin block-center(){
+%block-center{
 	position: absolute;
 	top: 0;
 	right: 0;
