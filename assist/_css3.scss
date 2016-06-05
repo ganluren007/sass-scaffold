@@ -51,3 +51,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+//box shadow
+@include box-shadow($style...){
+  box-shadow: $style;
+  -webkit-box-shadow: $style;
+}

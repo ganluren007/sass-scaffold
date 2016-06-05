@@ -89,3 +89,10 @@
     border-bottom:$size solid transparent;
   }
 }
+
+//circle
+@include circle($size){
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
