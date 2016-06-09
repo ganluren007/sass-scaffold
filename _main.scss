@@ -1,13 +1,27 @@
-@import "base/_reset";
-@import "base/_base";
-@import "assist/_variable";
-@import "assist/_mixin";
-@import "assist/_animation";
-@import "assist/_css3";
-@import "assist/_function";
-@import "layout/_table";
-@import "component/_font";
-@import "component/_button";
-@import "component/_input";
-@import "component/_modal";
-@import "component/_loading";
+//base
+@import "base/reset";
+@import "base/base";
+
+//vendor
+
+//assist
+@import "assist/variable";
+@import "assist/mixin";
+@import "assist/animation";
+@import "assist/css3";
+@import "assist/media";
+
+//component
+@import "component/font";
+@import "component/button";
+@import "component/input";
+@import "component/modal";
+@import "component/loading";
+@import "component/carousel";
+
+//layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/table";
+@import "layout/form";
