@@ -1,0 +1,31 @@
+.header{
+  $height: 0;
+  width: 100%;
+  height: $height;
+
+  .nav{
+    float: left;
+    margin-left: 0;
+
+    a{
+      font-size: 0;
+      color: #000;
+
+      &:hover{}
+    }
+  }
+
+  li{
+    float: left;
+    height: $height;
+    margin-right: 0;
+
+    &.on{}
+  }
+}
+
+.logo{
+  width: 0;
+  height: 0;
+  float: left;
+}
