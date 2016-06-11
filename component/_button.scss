@@ -1,0 +1,84 @@
+$btn-active: false;
+
+@mixin btn-size($size: 'lg') {
+  text-align: center;
+  border-radius: 0;
+  border: 1px solid;
+  @if $size == 'sm'{
+    width: 0;
+    height: 0;
+    line-height: 0;
+  }
+  @else if $size == 'me' {
+    width: 0;
+    height: 0;
+    line-height: 0;
+  }
+  @else if $size == 'lg' {
+    width: 0;
+    height: 0;
+    line-height: 0;
+  }
+}
+
+@mixin btn-color($color) {
+  @if $color == 'white'{
+    background: none;
+    color: #fff;
+    border-color: none;
+
+    &:hover{
+      background: none;
+      color: #fff;
+      border-color: none;
+    }
+
+    @if($btn-active){
+      &:active{
+        background: none;
+        color: #fff;
+        border-color: none;
+      }
+    }
+  }
+  @else if $color == 'blue'{
+    background: none;
+    color: #fff;
+    border-color: none;
+
+    &:hover{
+      background: none;
+      color: #fff;
+      border-color: none;
+    }
+
+    @if($btn-active){
+      &:active{
+        background: none;
+        color: #fff;
+        border-color: none;
+      }
+    }
+  }
+}
+
+.btn-sm{
+  @include btn-size('sm');
+}
+
+.btn-me{
+  @include btn-size('me')
+}
+
+.btn-lg{
+  @include btn-size;
+}
+
+.btn-white{
+  @include btn-color('white');
+}
+
+.btn-blue{
+  @include btn-color('blue');
+}
+
