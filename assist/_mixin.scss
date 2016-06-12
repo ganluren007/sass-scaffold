@@ -67,26 +67,19 @@
   content:"";
   height: 0;
   width: 0;
-  overflow:hidden;
+  overflow: hidden;
+  border: $size solid;
   @if $direction == top {
-    border-bottom:$size solid $borderColor;
-    border-left:$size solid transparent;
-    border-right:$size solid transparent;
+  	border-color: transparent transparent $borderColor;
   }
   @else if $direction == right {
-    border-left:$size solid $borderColor;
-    border-top:$size solid transparent;
-    border-bottom:$size solid transparent;
+  	border-color: transparent transparent transparent $borderColor;
   }
   @else if $direction == bottom {
-    border-top:$size solid $borderColor;
-    border-left:$size solid transparent;
-    border-right:$size solid transparent;
+  	border-color: $borderColor transparent transparent;
   }
   @else if $direction == left {
-    border-right:$size solid $borderColor;
-    border-top:$size solid transparent;
-    border-bottom:$size solid transparent;
+  	border-color: transparent $borderColor transparent transparent;
   }
 }
 

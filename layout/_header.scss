@@ -3,7 +3,13 @@
   width: 100%;
   height: $height;
 
-  .nav{
+  @at-root .logo{
+  width: 0;
+  height: 0;
+  float: left;
+}
+
+  @at-root .nav{
     float: left;
     margin-left: 0;
 
@@ -24,8 +30,3 @@
   }
 }
 
-.logo{
-  width: 0;
-  height: 0;
-  float: left;
-}
