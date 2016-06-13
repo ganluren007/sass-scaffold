@@ -44,8 +44,8 @@
 }
 
 //block center and middle
-%block-center{
-	position: absolute;
+@mixin block-center($pos: absolute){
+	position: $pos;
 	top: 0;
 	right: 0;
 	bottom: 0;
