@@ -1,18 +1,18 @@
+$prefixer : '', '-webkit-', '-moz-', '-o-';
+$prefixer-transform: '', '-webkit-', '-moz-', '-o-', '-ms-';
+
 //transform
 @mixin transform($action){
-  transform: $action;
-  -ms-transform: $action;
-  -webkit-transform: $action;
-  -o-transform: $action;
-  -moz-transform: $action;
+  @each $pre in $prefixer-transform{
+    #{$pre}transform: $action;
+  }
 }
 
 //transition
 @mixin transition($action...){
-  transition: $action;
-  -moz-transition: $action;
-  -webkit-transition: $action;
-  -o-transition: $action;
+  @each $pre in $prefixer{
+    #{$pre}transition: $action;
+  }
 }
 
 //animation keyframes
@@ -33,10 +33,9 @@
 
 //animation
 @mixin animate($action){
-  animation: $action;
-  -moz-animation: $action;
-  -webkit-animation: $action;
-  -o-animation: $action;
+  @each $pre in $prefixer{
+    #{$pre}animation: $action;
+  }
 }
 
 //opacity
