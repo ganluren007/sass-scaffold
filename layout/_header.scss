@@ -1,12 +1,18 @@
 .header{
   $height: 0;
-  width: 100%;
   height: $height;
 
   @at-root .logo{
   width: 0;
   height: 0;
   float: left;
+  background: url();
+
+  a{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 
   @at-root .nav{
@@ -16,8 +22,6 @@
     a{
       font-size: 0;
       color: #000;
-
-      &:hover{}
     }
   }
 
@@ -26,7 +30,8 @@
     height: $height;
     margin-right: 0;
 
-    &.on{}
+    &.on,
+    a:hover{}
   }
 }
 
