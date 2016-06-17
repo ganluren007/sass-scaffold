@@ -5,6 +5,9 @@
     width: 0;
     height: 0;
 }
+
+$pageDotTag: span;
+
 .slide{
   width: 0;
   height: 0;
@@ -28,4 +31,11 @@
   left: 0;
   right: 0;
   text-align: center;
+
+  #{$pageDotTag}{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
 }
