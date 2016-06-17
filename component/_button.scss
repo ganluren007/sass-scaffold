@@ -25,7 +25,7 @@ $btn-active: false;
   @if $color == 'white'{
     background: none;
     color: #fff;
-    border-color: none;
+    border-color: white;
 
     &:hover{
       background: none;
@@ -60,6 +60,11 @@ $btn-active: false;
       }
     }
   }
+}
+
+@mixin btn-style($size, $color){
+  @include btn-size($size);
+  @include btn-color($color);
 }
 
 .btn-sm{
