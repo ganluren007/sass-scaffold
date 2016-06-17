@@ -3,10 +3,7 @@
   height: $height;
 
   @at-root .logo{
-  width: 0;
-  height: 0;
   float: left;
-  background: url();
 
   a{
     display: block;
@@ -14,24 +11,5 @@
     height: 100%;
   }
 }
-
-  @at-root .nav{
-    float: left;
-    margin-left: 0;
-
-    a{
-      font-size: 0;
-      color: #000;
-    }
-  }
-
-  li{
-    float: left;
-    height: $height;
-    margin-right: 0;
-
-    &.on,
-    a:hover{}
-  }
 }
 

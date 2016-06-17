@@ -4,57 +4,22 @@ $text-alert: false;
 @if $modal-alert {
   .modal-alert{
    @include block-center(fixed);
-   width: 0;
-   height: 0;
-   background: #fff;
 
    .close{
     position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 0;
-    color: #000;
   }
-}
-
-.overlay{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  background: rgba(0, 0, 0, .7);
-  filter: Alpha(opacity = 70);
 }
 }
 
 @if $text-alert {
-  .msg-warn{
-    font-size: 0;
-    color: #000;
-    line-height: 1;
-    background: url() no-repeat;
-  }
+  .msg-warn{ }
 
   .msg-error{
-    font-size: 0;
-    color: #000;
-    line-height: 1;
-    background: url() no-repeat;
   }
 
   .msg-pass{
-    font-size: 0;
-    color: #000;
-    line-height: 1;
-    background: url() no-repeat;
   }
 
   .tips{
-    font-size: 0;
-    color: #000;
-    line-height: 1;
-    background: url() no-repeat;
   }
 }
