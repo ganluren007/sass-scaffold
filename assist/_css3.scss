@@ -62,3 +62,17 @@ $prefixer-transform: '', '-webkit-', '-moz-', '-o-', '-ms-';
   text-shadow: $style;
   -webkit-text-shadow: $style;
 }
+
+//linear gradient
+@include linear($style){
+  background: linear-gradient($style);
+  background: -webkit-linear-gradient($style);
+  background: -moz-linear-gradient($style);
+}
+
+//radial gradient
+@include radial($style){
+  background: radial-gradient($style);
+  background: -webkit-radial-gradient($style);
+  background: -moz-radial-gradient($style);
+}
