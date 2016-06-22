@@ -1,4 +1,4 @@
-$btn-active: false;
+$btn-style-cls: false;
 
 @mixin btn-size($size: 'lg') {
   text-align: center;
@@ -27,23 +27,24 @@ $btn-active: false;
   @include btn-color($color);
 }
 
-.btn-sm{
-  @include btn-size('sm');
-}
+@if $btn-style-cls == true {
+  .btn-sm{
+    @include btn-size('sm');
+  }
 
-.btn-me{
-  @include btn-size('me')
-}
+  .btn-me{
+    @include btn-size('me')
+  }
 
-.btn-lg{
-  @include btn-size;
-}
+  .btn-lg{
+    @include btn-size;
+  }
 
-.btn-white{
-  @include btn-color('white');
-}
+  .btn-white{
+    @include btn-color('white');
+  }
 
-.btn-blue{
-  @include btn-color('blue');
+  .btn-blue{
+    @include btn-color('blue');
+  }
 }
-

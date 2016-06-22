@@ -1,25 +1,30 @@
+$pageDotTag: span;  //轮播切换按钮的标签（span或a）
+$slide-btn-hoffset: 0;  //轮播左右切换按钮离边缘的偏移量
+
 %slide-btn{
   position: absolute;
-    top: 50%;
+  top: 50%;
 }
 
-$pageDotTag: span;
-
 .slide{
-
   .btn-left{
     @extend %slide-btn;
+    left: $slide-btn-hoffset;
   }
 
   .btn-right{
     @extend %slide-btn;
+    right: $slide-btn-hoffset;
   }
 }
 
 .pagination{
   position: absolute;
+  left: 0;
+  right: 0;
   text-align: center;
 
   #{$pageDotTag}{
+    display: inline-block;
   }
 }

@@ -1,9 +1,14 @@
+$input-size: 14px;
+
+.input-wrapper{
+}
+
 .input-text{
+  font-size: $input-size;
 }
 
 .input-ph{
   position: absolute;
-}
-
-.input-wrapper{
+  top: 0;
+  font-size: $input-size;
 }
