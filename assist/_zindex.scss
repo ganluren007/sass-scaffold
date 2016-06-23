@@ -1,1 +1,8 @@
-$ZMAP: {}
+$z-map: {
+	'overlay': 10,
+	'modal': 11
+}
+
+@function z($cls){
+	@return map-get($z-map, $cls);
+}
