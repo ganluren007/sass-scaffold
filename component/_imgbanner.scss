@@ -1,0 +1,13 @@
+.img-mask{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: z('img-mask');
+}
+
+.img-desc{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: z('img-desc');
+}

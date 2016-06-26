@@ -1,0 +1,16 @@
+//---变量---
+$pageInput: true;  //是否需要输入框跳转
+//----------
+
+.page{
+  a.page-btn{
+    &:hover{}
+  }
+
+  span.page-btn{}
+
+  .page-text{}
+  @if $pageInput{
+    input{}
+  }
+}

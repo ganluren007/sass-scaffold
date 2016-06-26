@@ -1,27 +1,28 @@
 //background-position with image
 @mixin bpImage($width, $height, $x, $y){
-	width: $width;
-	height: $height;
-	@if $x == 0 and $y == 0{
-		background-position: 0 0;
-	}
-	@else if $x == 0 and $y != 0{
-		background-position: 0 $y;
-	}
-	@else if $x != 0 and $y == 0{
-		background-position: $x 0;
-	}
-	@else{
-		background-position: $x $y;
-	}
+  $bgImage: url();
+  width: $width;
+  height: $height;
+  @if $x != 0 and $y != 0{
+    background: $bgImage $x $y;
+  }
+  @else if $x == 0 and $y != 0{
+    background: $bgImage 0 $y;
+  }
+  @else if $x != 0 and $y == 0{
+    background: $bgImage $x 0;
+  }
+  @else{
+    background: $bgImage 0 0;
+  }
 }
 
 //background-position without image
 @mixin bp($width, $height, $x, $y){
 	width: $width;
 	height: $height;
-	@if $x == 0 and $y == 0{
-		background-position: 0 0;
+	@if $x != 0 and $y != 0{
+		background-position: $x $y;
 	}
 	@else if $x == 0 and $y != 0{
 		background-position: 0 $y;
@@ -30,7 +31,7 @@
 		background-position: $x 0;
 	}
 	@else{
-		background-position: $x $y;
+		background-position: 0 0;
 	}
 }
 
@@ -53,33 +54,35 @@
 	margin: auto;
 }
 
+%block-center{
+  @include block-center;
+}
+
 //inline block
 @mixin inline-block(){
 	display: inline-block;
-	@if($lte7){
-		*display:inline;
-		*zoom:1;
-	}
+  *display:inline;
+  *zoom:1;
 }
 
 // triangle
-@mixin triangle($direction, $size, $borderColor ) {
+@mixin tri($dir, $size, $color ) {
   content:"";
   height: 0;
   width: 0;
   overflow: hidden;
   border: $size solid;
-  @if $direction == top {
-  	border-color: transparent transparent $borderColor;
+  @if $dir == top {
+  	border-color: transparent transparent $color;
   }
-  @else if $direction == right {
-  	border-color: transparent transparent transparent $borderColor;
+  @else if $dir == right {
+  	border-color: transparent transparent transparent $color;
   }
-  @else if $direction == bottom {
-  	border-color: $borderColor transparent transparent;
+  @else if $dir == bottom {
+  	border-color: $color transparent transparent;
   }
-  @else if $direction == left {
-  	border-color: transparent $borderColor transparent transparent;
+  @else if $dir == left {
+  	border-color: transparent $color transparent transparent;
   }
 }
 

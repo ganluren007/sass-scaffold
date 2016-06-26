@@ -11,5 +11,11 @@
 			height: 100%;
 		}
 	}
-}
 
+	@at-root .nav{
+		li{
+			float: left;
+			line-height: $height;
+		}
+	}
+}
