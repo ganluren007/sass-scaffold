@@ -1,11 +1,19 @@
+// 变量
+//---------------------------------
 $pageDotTag: span;  //轮播切换按钮的标签（span或a）
 $slide-btn-hoffset: 0;  //轮播左右切换按钮离边缘的偏移量
 
+
+// placeholder
+//---------------------------------
 %slide-btn{
   position: absolute;
   top: 50%;
 }
 
+
+// 样式
+//---------------------------------
 .slide{
   .btn-left{
     @extend %slide-btn;

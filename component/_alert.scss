@@ -1,10 +1,14 @@
+// 变量
+//---------------------------------
 $modal-alert: false;
 $text-alert: false;
 
-@if $modal-alert {
+
+// 样式
+//---------------------------------
+@if $modal-alert{
   .modal-alert{
    @include block-center(fixed);
-
    .close{
     position: absolute;
   }
@@ -12,14 +16,11 @@ $text-alert: false;
 }
 
 @if $text-alert {
-  .msg-warn{ }
+  .msg-warn{}
 
-  .msg-error{
-  }
+  .msg-error{}
 
-  .msg-pass{
-  }
+  .msg-pass{}
 
-  .tips{
-  }
+  .tips{}
 }

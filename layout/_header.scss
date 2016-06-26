@@ -1,6 +1,12 @@
+// 变量
+//---------------------------------
+$header-height: 0;
+
+
+// 样式
+//---------------------------------
 .header{
-	$height: 0;
-	height: $height;
+	height: $header-height;
 
 	@at-root .logo{
 		float: left;
@@ -15,7 +21,7 @@
 	@at-root .nav{
 		li{
 			float: left;
-			line-height: $height;
+			line-height: $header-height;
 		}
 	}
 }

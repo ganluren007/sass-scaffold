@@ -1,5 +1,10 @@
+// 变量
+//---------------------------------
 $btn-style-cls: false;
 
+
+// mixin
+//---------------------------------
 @mixin btn-size($size: 'lg') {
   text-align: center;
   border: 1px solid;
@@ -27,6 +32,9 @@ $btn-style-cls: false;
   @include btn-color($color);
 }
 
+
+// 样式
+//---------------------------------
 @if $btn-style-cls == true {
   .btn-sm{
     @include btn-size('sm');
