@@ -1,7 +1,6 @@
 // 变量
 //---------------------------------
-$pageDotTag: span;  //轮播切换按钮的标签（span或a）
-$slide-btn-hoffset: 0;  //轮播左右切换按钮离边缘的偏移量
+$slideBtnOoffset: 0;  //轮播左右切换按钮离边缘的偏移量
 
 
 // placeholder
@@ -9,6 +8,9 @@ $slide-btn-hoffset: 0;  //轮播左右切换按钮离边缘的偏移量
 %slide-btn{
   position: absolute;
   top: 50%;
+  width: 30px;
+  height: 70px;
+  background: #000;
 }
 
 
@@ -17,12 +19,12 @@ $slide-btn-hoffset: 0;  //轮播左右切换按钮离边缘的偏移量
 .slide{
   .btn-left{
     @extend %slide-btn;
-    left: $slide-btn-hoffset;
+    left: $slideBtnOoffset;
   }
 
   .btn-right{
     @extend %slide-btn;
-    right: $slide-btn-hoffset;
+    right: $slideBtnOoffset;
   }
 }
 
@@ -30,9 +32,14 @@ $slide-btn-hoffset: 0;  //轮播左右切换按钮离边缘的偏移量
   position: absolute;
   left: 0;
   right: 0;
+  bottom: 10px;
   text-align: center;
 
-  #{$pageDotTag}{
+  span{
     display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%:
   }
 }

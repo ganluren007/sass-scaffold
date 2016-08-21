@@ -1,19 +1,20 @@
 // 变量
 //---------------------------------
-$input-size: 14px;
+$inputFontSize: 14px;
 
 
 // 样式
 //---------------------------------
 .input-wrapper{
+    position: relative;
 }
 
 .input-text{
-  font-size: $input-size;
+    font-size: $FontSize;
 }
 
 .input-ph{
-  position: absolute;
-  top: 0;
-  font-size: $input-size;
+    position: absolute;
+    top: 0;
+    font-size: $FontSize;
 }

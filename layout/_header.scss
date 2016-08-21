@@ -1,15 +1,18 @@
 // 变量
 //---------------------------------
-$header-height: 0;
+$headerHeight: 80px;
 
 
 // 样式
 //---------------------------------
 .header{
-	height: $header-height;
+	height: $headerHeight;
 
 	@at-root .logo{
 		float: left;
+		width: 200px;
+		height: 100px;
+		background: url();
 
 		a{
 			display: block;
@@ -19,9 +22,11 @@ $header-height: 0;
 	}
 
 	@at-root .nav{
+		margin-left: 50px;
+
 		li{
 			float: left;
-			line-height: $header-height;
+			line-height: $headerHeight;
 		}
 	}
 }

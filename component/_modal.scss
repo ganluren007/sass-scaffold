@@ -1,3 +1,7 @@
+// 变量
+//---------------------------------
+$modalColor: #fff;
+
 // 样式
 //---------------------------------
 .overlay{
@@ -17,4 +21,19 @@
 
     &:hover{}
   }
+}
+
+.modal-header{
+  height: 40px;
+  background: $modalColor;
+
+  h3{}
+}
+
+.modal-main{
+  background: $modalColor;
+}
+
+.modal-footer{
+  background: $modalColor;
 }

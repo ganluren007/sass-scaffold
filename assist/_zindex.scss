@@ -1,10 +1,14 @@
-$z-map: {  //各个类的z-index
+// 变量
+//---------------------------------
+$zMap: {  //各个类的z-index
 	'overlay': 10,
 	'modal': 11,
-  'img-mask': 2,
-  'img-desc': 3
+    'img-mask': 2,
+    'img-desc': 3
 };
 
-@function z($cls){
-	@return map-get($z-map, $cls);
+// function
+//---------------------------------
+@function z($cls) {
+	@return map-get($zMap, $cls);
 }

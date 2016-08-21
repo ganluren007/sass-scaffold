@@ -1,58 +1,48 @@
-// 变量
-//---------------------------------
-$btn-style-cls: false;
-
-
 // mixin
 //---------------------------------
 @mixin btn-size($size: 'lg') {
   text-align: center;
   border: 1px solid;
-  @if $size == 'sm'{
-  }
-  @else if $size == 'me' {
-  }
-  @else if $size == 'lg' {
-  }
-}
-
-@mixin btn-color($color) {
-  @if $color == 'white'{
-    &:hover{
+  @if $size == 'sm' {
+    } @else if $size == 'me' {
+      } @else if $size == 'lg' {
+      }
     }
-  }
-  @else if $color == 'blue'{
-    &:hover{
-    }
-  }
-}
 
-@mixin btn-style($size, $color){
-  @include btn-size($size);
-  @include btn-color($color);
-}
+    @mixin btn-color($color) {
+      @if $color == 'white' {
+        &:hover {
+        }
+        } @else if $color == 'blue'{
+          &:hover {
+          }
+        }
+      }
+
+      @mixin btn-style($size, $color) {
+        @include btn-size($size);
+        @include btn-color($color);
+      }
 
 
 // 样式
 //---------------------------------
-@if $btn-style-cls == true {
-  .btn-sm{
-    @include btn-size('sm');
-  }
+.btn-sm{
+  @include btn-size('sm');
+}
 
-  .btn-me{
-    @include btn-size('me')
-  }
+.btn-me{
+  @include btn-size('me')
+}
 
-  .btn-lg{
-    @include btn-size;
-  }
+.btn-lg{
+  @include btn-size;
+}
 
-  .btn-white{
-    @include btn-color('white');
-  }
+.btn-white{
+  @include btn-color('white');
+}
 
-  .btn-blue{
-    @include btn-color('blue');
-  }
+.btn-blue{
+  @include btn-color('blue');
 }

@@ -1,26 +1,20 @@
-// 变量
-//---------------------------------
-$modal-alert: false;
-$text-alert: false;
-
-
 // 样式
 //---------------------------------
-@if $modal-alert{
-  .modal-alert{
-   @include block-center(fixed);
-   .close{
-    position: absolute;
-  }
+
+//modal-alert
+.modal-alert{
+     @include block-center(fixed);
+     .close{
+        position: absolute;
+    }
 }
-}
 
-@if $text-alert {
-  .msg-warn{}
 
-  .msg-error{}
+//text-alert
+.msg-warn{}
 
-  .msg-pass{}
+.msg-error{}
 
-  .tips{}
-}
+.msg-pass{}
+
+.tips{}

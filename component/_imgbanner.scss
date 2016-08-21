@@ -1,15 +1,24 @@
+// 变量
+//---------------------------------
+$imgBannerHeight: 30px;
 // 样式
 //---------------------------------
 .img-mask{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: z('img-mask');
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: z('img-mask');
+    width: 100%;
+    height: $imgBannerHeight;
 }
 
 .img-desc{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: z('img-desc');
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: z('img-desc');
+    padding-left: 10px;
+    height: $imgBannerHeight;
+    color: #fff;
 }
