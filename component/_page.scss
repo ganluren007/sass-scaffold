@@ -1,19 +1,17 @@
-// 变量
-//---------------------------------
-$pageInput: true;  //是否需要输入框跳转
-
-
 // 样式
 //---------------------------------
 .page{
-  a.page-btn{
-    &:hover{}
-  }
-
-  span.page-btn{}
-
-  .page-text{}
-  @if $pageInput{
-    input{}
+  a{
+    font-size: 12px;
+    color: #666;
+    &.page-num{
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    }
+    &:hover{
+        background: $mainHoverColor;
+    }
   }
 }

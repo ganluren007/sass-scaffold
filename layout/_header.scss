@@ -7,26 +7,29 @@ $headerHeight: 80px;
 //---------------------------------
 .header{
 	height: $headerHeight;
-
-	@at-root .logo{
-		float: left;
-		width: 200px;
-		height: 100px;
-		background: url();
-
-		a{
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
+}
+.logo{
+	float: left;
+	width: 200px;
+	height: 100px;
+	background: url();
+	a{
+		display: block;
+		width: 100%;
+		height: 100%;
 	}
-
-	@at-root .nav{
-		margin-left: 50px;
-
-		li{
-			float: left;
-			line-height: $headerHeight;
+}
+.nav{
+	margin-left: 50px;
+	li{
+		float: left;
+		line-height: $headerHeight;
+	}
+	a{
+		font-size: 16px;
+		color: #333;
+		&:hover{
+			color: $mainColor;
 		}
 	}
 }

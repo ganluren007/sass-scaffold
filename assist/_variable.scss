@@ -1,13 +1,12 @@
 //设置
 //---------------------------------
-$lte7: true;
+$lte7: true;                  //最低兼容IE7
+
 
 //颜色
 //---------------------------------
-$mainColor: #169fe6;
-$titleColor: #333;
-$contentColor: #666;
-
-//字号
-//---------------------------------
-$mainFontSize: 14px;
+$mainColor: #169fe6;          //主要的颜色
+$mainHoverColor: #1481b9;     //主要的二态颜色
+$titleColor: #333;            //标题的颜色
+$contentColor: #666;          //内容的颜色
+$borderColor: #eee;           //边框的颜色

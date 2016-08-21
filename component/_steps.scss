@@ -1,17 +1,32 @@
-// 变量
-//---------------------------------
-$pre-cls: name;
-
-
 // placeholder
 //---------------------------------
-%#{$pre-cls}-steps{
-  position: absolute;
+%steps-public{
+    width: 100px;
+    height: 100px;
+    background-image:url();
 }
-
 
 // 样式
 //---------------------------------
-.#{$pre-cls}-steps1{
-  @extend %#{$pre-cls}-steps;
+.steps{
+    li{
+        &.step1{
+            background-position: 0 0;
+            &.on{
+                background-position: 0 0;
+            }
+        }
+        &.step2{
+            background-position: 0 0;
+            &.on{
+                background-position: 0 0;
+            }
+        }
+        &.step3{
+            background-position: 0 0;
+            &.on{
+                background-position: 0 0;
+            }
+        }
+    }
 }

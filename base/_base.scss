@@ -5,17 +5,14 @@ body{
   color: #666;
   background: #fff;
 }
-
 .wrapper{
   margin: 0 auto;
   width: 1200px;
 }
-
 .clearfix{
   @if $lte7{
     *zoom: 1;
   }
-
   &:after{
     display: block;
     clear: both;
@@ -24,16 +21,13 @@ body{
     content: "";
   }
 }
-
 .clear {
   clear: both;
 }
-
 a {
   text-decoration: none;
   outline: none;
 }
-
 input,
 button{
   outline: none;

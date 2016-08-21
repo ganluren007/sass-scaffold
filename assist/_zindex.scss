@@ -1,11 +1,12 @@
 // 变量
 //---------------------------------
-$zMap: {  //各个类的z-index
-	'overlay': 10,
-	'modal': 11,
-    'img-mask': 2,
-    'img-desc': 3
+
+//tips: z-index的值不能超过10
+$zMap: {                      //各个类的z-index
+	'overlay': 3,
+	'modal': 4
 };
+
 
 // function
 //---------------------------------

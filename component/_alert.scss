@@ -1,20 +1,35 @@
-// 样式
+// 变量
 //---------------------------------
+$alertFontSize: 12px;
+$alertColor: #999;
 
-//modal-alert
-.modal-alert{
-     @include block-center(fixed);
-     .close{
-        position: absolute;
-    }
+
+// placeholder
+//---------------------------------
+%alert-public{
+    font-size: $alertFontSize;
+    background-image: url();
 }
 
 
-//text-alert
-.msg-warn{}
-
-.msg-error{}
-
-.msg-pass{}
-
-.tips{}
+// 样式
+//---------------------------------
+.msg-warn{
+    @extend %alert-public;
+    color: yellow;
+    background-position:  0 0;
+}
+.msg-error{
+    @extend %alert-public;
+    color: red;
+    background-position:  0 0;
+}
+.msg-pass{
+    @extend %alert-public;
+    color: $alertColor;
+    background-position:  0 0;
+}
+.tips{
+    font-size: $alertFontSize;
+    color: $alertColor;
+}

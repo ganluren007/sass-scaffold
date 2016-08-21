@@ -6,40 +6,38 @@ $slideBtnOoffset: 0;  //轮播左右切换按钮离边缘的偏移量
 // placeholder
 //---------------------------------
 %slide-btn{
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 70px;
-  background: #000;
+    position: absolute;
+    top: 50%;
+    margin-left: -35px;
+    width: 30px;
+    height: 70px;
+    background: #000;
 }
 
 
 // 样式
 //---------------------------------
 .slide{
-  .btn-left{
-    @extend %slide-btn;
-    left: $slideBtnOoffset;
-  }
-
-  .btn-right{
-    @extend %slide-btn;
-    right: $slideBtnOoffset;
-  }
+    .btn-left{
+        @extend %slide-btn;
+        left: $slideBtnOoffset;
+    }
+    .btn-right{
+        @extend %slide-btn;
+        right: $slideBtnOoffset;
+    }
 }
-
 .pagination{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 10px;
-  text-align: center;
-
-  span{
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: red;
-    border-radius: 50%:
-  }
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    a{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%:
+        background: red;
+    }
 }

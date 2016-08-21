@@ -1,17 +1,17 @@
 //background-position with image
 @mixin bpImage($width, $height, $x, $y) {
-  $bgImage: url();
-  width: $width;
-  height: $height;
-  @if $x != 0 and $y != 0 {
-    background: $bgImage $x $y;
-  } @else if $x == 0 and $y != 0 {
-    background: $bgImage 0 $y;
-  } @else if $x != 0 and $y == 0 {
-    background: $bgImage $x 0;
-  } @else {
-    background: $bgImage 0 0;
-  }
+    $bgImage: url();
+    width: $width;
+    height: $height;
+    @if $x != 0 and $y != 0 {
+        background: $bgImage $x $y;
+    } @else if $x == 0 and $y != 0 {
+        background: $bgImage 0 $y;
+    } @else if $x != 0 and $y == 0 {
+        background: $bgImage $x 0;
+    } @else {
+        background: $bgImage 0 0;
+    }
 }
 
 //background-position without image
@@ -20,11 +20,11 @@
 	height: $height;
 	@if $x != 0 and $y != 0 {
 		background-position: $x $y;
-	} @else if $x == 0 and $y != 0{
+	} @else if $x == 0 and $y != 0 {
 		background-position: 0 $y;
-	} @else if $x != 0 and $y == 0{
+	} @else if $x != 0 and $y == 0 {
 		background-position: $x 0;
-	} @else{
+	} @else {
 		background-position: 0 0;
 	}
 }
@@ -49,47 +49,47 @@
 }
 
 %blockCenter{
-  @include blockCenter;
+    @include blockCenter;
 }
 
 //inline block
 @mixin inlineBlock() {
 	display: inline-block;
-  *display:inline;
-  *zoom:1;
+    *display:inline;
+    *zoom:1;
 }
 
 // triangle
 @mixin tri($dir, $size, $color) {
-  content:"";
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  border: $size solid;
-  @if $dir == top {
-  	border-color: transparent transparent $color;
-    border-top-width: 0;
-  }@else if $dir == right {
-  	border-color: transparent transparent transparent $color;
-    border-top-width: 0;
-  }@else if $dir == bottom {
-  	border-color: $color transparent transparent;
-    border-bottom-width: 0;
-  }@else if $dir == left {
-  	border-color: transparent $color transparent transparent;
-    border-left-width: 0;
-  }
+    content:"";
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    border: $size solid;
+    @if $dir == 'top' {
+      	border-color: transparent transparent $color;
+        border-top-width: 0;
+    }@else if $dir == 'right' {
+      	border-color: transparent transparent transparent $color;
+        border-top-width: 0;
+    }@else if $dir == 'bottom' {
+      	border-color: $color transparent transparent;
+        border-bottom-width: 0;
+    }@else if $dir == 'left' {
+      	border-color: transparent $color transparent transparent;
+        border-left-width: 0;
+    }
 }
 
 //circle
 @mixin circle($size) {
-  width: $size;
-  height: $size;
-  border-radius: 50%;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
 }
 
 //paragraph middle
 %paraMiddle {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
