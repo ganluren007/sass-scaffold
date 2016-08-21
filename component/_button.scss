@@ -34,6 +34,31 @@
 .btn-me{
   @include btn-size('me')
 }
+// 变量
+//---------------------------------
+$btn-style-cls: false;
+$btn-height: 0;
+$btn-color: #fff;
+
+
+// mixin
+//---------------------------------
+@mixin btn-size($size: 'lg') {
+  @if $size == 'sm'{
+  }
+  @else if $size == 'me' {
+  }
+  @else if $size == 'lg' {
+  }
+  border: 1px solid;
+  text-align: center;
+  line-height: $btn-height;
+}
+
+@mixin btn-color($color) {
+  border-color: $btn-color;
+  background: $btn-color;
+}
 
 .btn-lg{
   @include btn-size;
@@ -45,4 +70,23 @@
 
 .btn-blue{
   @include btn-color('blue');
+}
+// 样式
+//---------------------------------
+@if $btn-style-cls == true {
+  .btn-sm{
+    @include btn-size('sm');
+  }
+
+  .btn-me{
+    @include btn-size('me')
+  }
+
+  .btn-lg{
+    @include btn-size;
+  }
+}
+
+.submit{
+  @include inline-block;
 }
