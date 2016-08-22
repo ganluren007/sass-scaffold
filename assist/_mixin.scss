@@ -93,3 +93,10 @@
     display: table-cell;
     vertical-align: middle;
 }
+
+//text-overflow
+%textOverflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,25 +1,32 @@
+// 变量
+//---------------------------------
+$btnWidth: 80px 120px 150px;
+$btnHeight: 20px 30px 40px;
+$btnFontSize: 12px 14px 16px;
+
+
 // mixin
 //---------------------------------
-@mixin btnSize($size: 'lg') {
+@mixin btnSize($size) {
     @include inlineBlock;
     border: 1px solid;
     border-radius: 4px;
     text-align: center;
     @if $size == 'sm' {
-        width: 80px;
-        height: 20px;
-        font-size: 12px;
-        line-height: 20px;
+        width: nth($btnWidth, 1);
+        height: nth($btnHeight, 1);
+        font-size: nth($btnFontSize, 1);
+        line-height: nth($btnHeight, 1);
     } @else if $size == 'me' {
-        width: 120px;
-        height: 30px;
-        font-size: 14px;
-        line-height: 30px;
+        width: nth($btnWidth, 2);
+        height: nth($btnHeight, 2);
+        font-size: nth($btnFontSize, 2);
+        line-height: nth($btnHeight, 2);
     } @else if $size == 'lg' {
-        width: 150px;
-        height: 30px;
-        font-size: 16px;
-        line-height: 30px;
+        width: nth($btnWidth, 3);
+        height: nth($btnHeight, 3);
+        font-size: nth($btnFontSize, 3);
+        line-height: nth($btnHeight, 3);
     }
 }
 
@@ -53,8 +60,8 @@
 // 样式
 //---------------------------------
 .btn-disabled{
-    border-color: #ccc;
-    background: #ccc;
+    border-color: $disabledColor;
+    background: $disabledColor;
 }
 .btn-wrapper{
     text-align: center;

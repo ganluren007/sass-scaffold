@@ -1,12 +1,53 @@
 // 变量
 //---------------------------------
 $inputFontSize: 14px;
+$inputWidth: 150px 100px;
+$inputHeight: 40px;
+$inputPaddingtop: ($inputHeight - $inputSize) / 2 - 2;  //兼容IE8及以下文字没有垂直居中的问题
+
+
+// mixin
+//---------------------------------
+@mixin inputSize($size) {
+    border: 1px solid $borderColor;
+    @if $size == 'lg' {
+        width: nth($inputWidth, 1);
+        @if $lte8 {
+            height: $inputFontSize + 4px;
+            padding $inputPaddingTop 0 $inputPaddingtop 10px;
+        } @else {
+            padding-left: 10px;
+            height: $inputHeight;
+        }
+    }
+    @else if $size == 'sm' {
+        width: nth($inputWidth, 2);
+        @if $lte8 {
+            height: $inputFontSize + 4px;
+            padding $inputPaddingTop 0 $inputPaddingtop 10px;
+        } @else {
+            padding-left: 10px;
+            height: $inputHeight;
+        }
+    }
+}
 
 
 // 样式
 //---------------------------------
 .input-wrapper{
     position: relative;
+}
+input{
+    &:focus{
+        box-shadow: 0 0 4px $mainColor;
+    }
+}
+.input-lg{
+    @include inputSize('lg');
+}
+.input-sm{
+    @include inputSize('sm');
 }
 .input-text{
     font-size: $inputFontSize;
@@ -19,6 +60,7 @@ $inputFontSize: 14px;
     color: #999;
 }
 .label-group{
+    margin-right: 10px;
     .checkbox{
         float: left;
         width: 20px;

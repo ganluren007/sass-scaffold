@@ -1,34 +1,36 @@
 /* base css */
 body{
-  margin: 0 auto;
-  font: 14px / 1.5 "microsoft yahei", Arial, sans-serif;
-  color: #666;
-  background: #fff;
+    margin: 0 auto;
+    font: 14px / 1.5 "microsoft yahei", Arial, sans-serif;
+    color: #666;
+    background: #fff;
 }
 .wrapper{
-  margin: 0 auto;
-  width: 1200px;
+    margin: 0 auto;
+    width: 1200px;
 }
 .clearfix{
-  @if $lte7{
-    *zoom: 1;
-  }
-  &:after{
-    display: block;
-    clear: both;
-    height: 0;
-    visibility: hidden;
-    content: "";
-  }
+    @if $lte7{
+        *zoom: 1;
+    }
+    &:after{
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        content: "";
+    }
 }
 .clear {
-  clear: both;
+    clear: both;
 }
 a {
-  text-decoration: none;
-  outline: none;
+    text-decoration: none;
+    outline: none;
 }
 input,
 button{
-  outline: none;
+    border: none;
+    background: none;
+    outline: none;
 }
