@@ -8,6 +8,12 @@ $prefixer-transform: '', '-webkit-', '-moz-', '-o-', '-ms-';
   }
 }
 
+@mixin transformOrigin($style){
+  @each $pre in $prefixer-transform{
+    #{$pre}transform-origin: $style;
+  }
+}
+
 //transition
 @mixin transition($action...){
   @each $pre in $prefixer{
@@ -45,20 +51,20 @@ $prefixer-transform: '', '-webkit-', '-moz-', '-o-', '-ms-';
 }
 
 //text overflow: ellipsis
-%text-overflow{
+%textOverflow{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 //box shadow
-@include box-shadow($style...){
+@include boxShadow($style...){
   box-shadow: $style;
   -webkit-box-shadow: $style;
 }
 
 //text shadow
-@include text-shadow($style...){
+@include textShadow($style...){
   text-shadow: $style;
   -webkit-text-shadow: $style;
 }

@@ -1,0 +1,159 @@
+@mixin icoBack($size, $color, $pos: relative) {
+    $borderWidth: $size / 10;
+    position: $pos;
+    width: $size;
+    height: $size;
+    border: $borderWidth solid $color;
+    border-radius: 50%;
+    &:before,
+    &:after{
+        position: absolute;
+        content: '';
+    }
+    &:before{
+        left: 50%;
+        top: ($size - $borderWidth) / 2;
+        width: $size / 2;
+        height: $borderWidth;
+        margin-left: - $size / 4;
+        background: $color;
+    }
+    &:after{
+        @include transform(rotate(45deg));
+        @include transformOrigin(100% 0);
+        left: 50%;
+        top: 50%;
+        width: $size / 4;
+        height: $size / 4;
+        border: $borderWidth solid $color;
+        border-top: 0;
+        border-right: 0;
+        margin-left: - $size / 5.7;
+    }
+}
+
+@mixin icoHome($size, $color, $pos: relative) {
+    position: $pos;
+    width: 0;
+    height: 0;
+    border-bottom: $size / 2 solid $color;
+    border-left: $size / 2 solid transparent;
+    border-right: $size / 2 solid transparent;
+    &:before{
+        position: absolute;
+        content: '';
+        bottom: -$size + 1px;
+        left: -$size / 3;
+        height: $size / 4;
+        width: $size / 6;
+        border: solid $color;
+        border-width: $size / 4 $size / 4 0;
+    }
+}
+
+@mixin icoSearch($size, $color, $pos: relative) {
+    position: $pos;
+    width: $size / 2;
+    height: $size / 2;
+    border: $size / 8 solid $color;
+    border-radius: 50%;
+    &:before{
+        @include transform(rotate(45deg));
+        @include transformOrigin(0 0);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: $size / 2;
+        height: $size / 8;
+        background: $color;
+    }
+}
+
+@mixin icoBgPlay($size, $color, $innerColor, $pos: relative) {
+    width: $size;
+    height: $size;
+    background: $color;
+    border-radius: 50%;
+}
+
+@mixin icoBgPause($size, $color, $innerColor, $pos: relative) {
+    position: $pos;
+    width: $size;
+    height: $size;
+    background: $color;
+    border-radius: 50%;
+}
+
+@mixin icoBgStop($size, $color, $innerColor, $pos: relative) {
+    position: $pos;
+    width: $size;
+    height: $size;
+    background: $color;
+    border-radius: 50%;
+}
+
+@mixin icoPlay($size, $color) {}
+
+@mixin icoPause($size, $color) {}
+
+@mixin icoStop($size, $color) {}
+
+@mixin icoDelete($size, $color) {}
+
+@mixin icoBgDelete($size, $color, $innerColor) {
+    width: $size;
+    height: $size;
+    background: $color;
+}
+
+@mixin icoAdd($size, $color) {
+    width: $size;
+    height: $size;
+    background: $color;
+}
+
+@mixin icoBgAdd($size, $color, $innerColor) {
+    width: $size;
+    height: $size;
+    background: $color;
+}
+
+@mixin icoRemove($size, $color) {}
+
+@mixin icoBgRemove($size, $color, $innerColor) {
+    width: $size;
+    height: $size;
+    background: $color;
+}
+
+@mixin icoClock($size, $color) {}
+
+@mixin icoSuccess($size, $color) {}
+
+@mixin icoBgSuccess($size, $color, $innerColor) {
+    width: $size;
+    height: $size;
+    background: $color;
+}
+
+@mixin icoPower($size, $color, $innerColor) {}
+
+@mixin star($size, $color) {}
+
+@mixin icoFresh($size, $color) {}
+
+@mixin icoWarn($size, $color, $innerColor) {
+    width: 0;
+    height: 0;
+    border-bottom: $size solid $color;
+    border-left: $size / 2 solid transparent;
+    border-right: $size / 2 solid transparent;
+    &:before{
+        position: absolute;
+        left: 50%;
+        top: 110%;
+        content: '!';
+        font-size: $size / 2;
+        color: $innerColor;
+    }
+}
