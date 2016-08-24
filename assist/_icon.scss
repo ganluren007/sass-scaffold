@@ -1,16 +1,14 @@
-@mixin icoBack($size, $color, $pos: relative) {
+@mixin icoBack($size, $color, $hoverColor: null, $pos: relative) {
+    @include circle($size);
     $borderWidth: $size / 10;
     position: $pos;
-    width: $size;
-    height: $size;
     border: $borderWidth solid $color;
-    border-radius: 50%;
     &:before,
-    &:after{
+    &:after {
         position: absolute;
         content: '';
     }
-    &:before{
+    &:before {
         left: 50%;
         top: ($size - $borderWidth) / 2;
         width: $size / 2;
@@ -18,7 +16,7 @@
         margin-left: - $size / 4;
         background: $color;
     }
-    &:after{
+    &:after {
         @include transform(rotate(45deg));
         @include transformOrigin(100% 0);
         left: 50%;
@@ -30,16 +28,23 @@
         border-right: 0;
         margin-left: - $size / 5.7;
     }
+    @if $hoverColor {
+         &:hover {
+            border-color: $hoverColor;
+            &:before {
+                background: $hoverColor;
+            }
+            &:after {
+                border-color: $hoverColor;
+            }
+        }
+    }
 }
 
-@mixin icoHome($size, $color, $pos: relative) {
+@mixin icoHome($size, $color, $hoverColor: null, $pos: relative) {
+    @include tri('top', $size / 2, $color);
     position: $pos;
-    width: 0;
-    height: 0;
-    border-bottom: $size / 2 solid $color;
-    border-left: $size / 2 solid transparent;
-    border-right: $size / 2 solid transparent;
-    &:before{
+    &:before {
         position: absolute;
         content: '';
         bottom: -$size + 1px;
@@ -49,23 +54,38 @@
         border: solid $color;
         border-width: $size / 4 $size / 4 0;
     }
+    @if $hoverColor {
+         &:hover {
+            border-bottom-color: $hoverColor;
+            &:before {
+                border-color: $hoverColor;
+            }
+        }
+    }
 }
 
-@mixin icoSearch($size, $color, $pos: relative) {
+@mixin icoSearch($size, $color, $hoverColor: null, $pos: relative) {
+    @include circle($size / 2);
     position: $pos;
-    width: $size / 2;
-    height: $size / 2;
     border: $size / 8 solid $color;
-    border-radius: 50%;
-    &:before{
+    &:before {
         @include transform(rotate(45deg));
         @include transformOrigin(0 0);
         position: absolute;
-        right: 0;
+        right: -$size * 0.9;
         bottom: 0;
-        width: $size / 2;
+        width: $size;
         height: $size / 8;
         background: $color;
+        content: '';
+    }
+    @if $hoverColor {
+         &:hover {
+            border-color: $hoverColor;
+            &:before {
+                background: $hoverColor;
+            }
+        }
     }
 }
 
@@ -74,22 +94,25 @@
     height: $size;
     background: $color;
     border-radius: 50%;
+    &:before {
+        @include tri('right', $size / 3, $innerColor);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        content: '';
+    }
 }
 
 @mixin icoBgPause($size, $color, $innerColor, $pos: relative) {
+    @include circle($size);
     position: $pos;
-    width: $size;
-    height: $size;
     background: $color;
-    border-radius: 50%;
 }
 
 @mixin icoBgStop($size, $color, $innerColor, $pos: relative) {
+    @include circle($size);
     position: $pos;
-    width: $size;
-    height: $size;
     background: $color;
-    border-radius: 50%;
 }
 
 @mixin icoPlay($size, $color) {}
@@ -106,10 +129,30 @@
     background: $color;
 }
 
-@mixin icoAdd($size, $color) {
-    width: $size;
-    height: $size;
-    background: $color;
+@mixin icoAdd($size, $color, $hoverColor: null, $pos: relative) {
+    &,
+    &:before {
+        width: $size;
+        height: $size / 6;
+        background: $color;
+    }
+    &{
+        position: $pos;
+    }
+    &:before{
+        @include transform(rotate(90deg));
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    @if $hoverColor {
+        &:hover {
+            &,
+            &:before{
+                background: $hoverColor;
+            }
+        }
+    }
 }
 
 @mixin icoBgAdd($size, $color, $innerColor) {
@@ -121,8 +164,7 @@
 @mixin icoRemove($size, $color) {}
 
 @mixin icoBgRemove($size, $color, $innerColor) {
-    width: $size;
-    height: $size;
+    @include circle($size);
     background: $color;
 }
 

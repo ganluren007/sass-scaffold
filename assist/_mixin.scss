@@ -61,17 +61,15 @@
 
 // triangle
 @mixin tri($dir, $size, $color) {
-    content:"";
     height: 0;
     width: 0;
-    overflow: hidden;
     border: $size solid;
     @if $dir == 'top' {
       	border-color: transparent transparent $color;
         border-top-width: 0;
     }@else if $dir == 'right' {
       	border-color: transparent transparent transparent $color;
-        border-top-width: 0;
+        border-right-width: 0;
     }@else if $dir == 'bottom' {
       	border-color: $color transparent transparent;
         border-bottom-width: 0;
