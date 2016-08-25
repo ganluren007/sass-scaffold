@@ -1,3 +1,8 @@
+//设置
+//---------------------------------
+
+//icons
+//---------------------------------
 @mixin icoBack($size, $color, $hoverColor: null, $pos: relative) {
     @include circle($size);
     $borderWidth: $size / 10;
@@ -100,6 +105,9 @@
         left: 50%;
         top: 50%;
         content: '';
+    }
+    @if $hoverColor {
+        background: $hoverColor;
     }
 }
 
