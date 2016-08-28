@@ -1,12 +1,19 @@
-// 变量
-//---------------------------------
+/*
+ * ---------------------------------
+ * button
+ * ---------------------------------
+ */
+
+
+/* 变量 */
+/* --------------------------------- */
 $btnWidth: 80px 120px 150px;
 $btnHeight: 20px 30px 40px;
 $btnFontSize: 12px 14px 16px;
 
 
-// mixin
-//---------------------------------
+/* mixin */
+/* --------------------------------- */
 @mixin btnSize($size) {
     @include inlineBlock;
     border: 1px solid;
@@ -57,19 +64,19 @@ $btnFontSize: 12px 14px 16px;
 }
 
 
-// 样式
-//---------------------------------
-.btn-disabled{
+/* 样式 */
+/* --------------------------------- */
+.btn-disabled {
     border-color: $disabledColor;
     background: $disabledColor;
 }
-.btn-wrapper{
+.btn-wrapper {
     text-align: center;
 }
-.submit{
+.submit {
     @include btnStyle('lg', 'blue');
 }
-.cancel{
+.cancel {
     @include btnStyle('me', 'white');
     margin-left: 30px;
 }

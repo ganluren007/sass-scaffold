@@ -1,83 +1,100 @@
+/*
+ * ---------------------------------
+ * css3
+ * ---------------------------------
+ */
+
+
+/* 变量 */
+/* --------------------------------- */
 $prefixer : '', '-webkit-', '-moz-', '-o-';
 $prefixer-transform: '', '-webkit-', '-moz-', '-o-', '-ms-';
 
-//transform
-@mixin transform($action){
-  @each $pre in $prefixer-transform{
+
+/* mixin */
+/* --------------------------------- */
+
+/* transform */
+@mixin transform($action) {
+  @each $pre in $prefixer-transform {
     #{$pre}transform: $action;
   }
 }
 
-@mixin transformOrigin($style){
-  @each $pre in $prefixer-transform{
+/* transform-origin */
+@mixin transformOrigin($style) {
+  @each $pre in $prefixer-transform {
     #{$pre}transform-origin: $style;
   }
 }
 
-//transition
-@mixin transition($action...){
-  @each $pre in $prefixer{
+/* transition */
+@mixin transition($action...) {
+  @each $pre in $prefixer {
     #{$pre}transition: $action;
   }
 }
 
-//animation keyframes
-@mixin keyframes($name){
-  @keyframes #{$name}{
+/* animation keyframes */
+@mixin keyframes($name) {
+  @keyframes #{$name} {
     @content;
   }
-  @-webkit-keyframes #{$name}{
+
+  @-webkit-keyframes #{$name} {
     @content;
   }
-  @-moz-keyframes #{$name}{
+
+  @-moz-keyframes #{$name} {
     @content;
   }
-  @-o-keyframes #{$name}{
+
+  @-o-keyframes #{$name} {
     @content;
   }
 }
 
-//animation
-@mixin animate($action){
-  @each $pre in $prefixer{
+/* animation */
+@mixin animate($action) {
+  @each $pre in $prefixer {
     #{$pre}animation: $action;
   }
 }
 
-//opacity
-@mixin opacity($n){
+/* opacity */
+@mixin opacity($n) {
   filter: Alpha(opacity = $n);
   opacity: $n / 100;
 }
 
-//text overflow: ellipsis
-%textOverflow{
-  white-space: nowrap;
+/* text overflow: ellipsis */
+%textOverflow {
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-//box shadow
-@include boxShadow($style...){
+/* box shadow */
+@include boxShadow($style...) {
   box-shadow: $style;
   -webkit-box-shadow: $style;
 }
 
-//text shadow
-@include textShadow($style...){
+/* text shadow */
+@include textShadow($style...) {
   text-shadow: $style;
   -webkit-text-shadow: $style;
 }
 
-//linear gradient
-@include linear($style){
+/* linear gradient */
+@include linear($style) {
   background: linear-gradient($style);
   background: -webkit-linear-gradient($style);
   background: -moz-linear-gradient($style);
 }
 
-//radial gradient
-@include radial($style){
+/* radial gradient */
+@include radial($style) {
   background: radial-gradient($style);
   background: -webkit-radial-gradient($style);
   background: -moz-radial-gradient($style);

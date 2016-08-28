@@ -1,12 +1,20 @@
-// 变量
-//---------------------------------
-$modalBg: #fff;               //弹窗背景色
-$modalRadius: 4px;            //弹窗圆角半径
-$modalWidth: 300px;           //弹窗宽度
+/*
+ * ---------------------------------
+ * modal
+ * ---------------------------------
+ */
 
-// 样式
-//---------------------------------
-.overlay{
+
+/* 变量 */
+/* --------------------------------- */
+$modalBg: #fff;               /* 弹窗背景色 */
+$modalRadius: 4px;            /* 弹窗圆角半径 */
+$modalWidth: 300px;           /* 弹窗宽度 */
+
+
+/* 样式 */
+/* --------------------------------- */
+.overlay {
     @include opacity(50);
     position: fixed;
     left: 0;
@@ -16,6 +24,7 @@ $modalWidth: 300px;           //弹窗宽度
     height: 100%;
     background: #000;
 }
+
 .modal{
     position: fixed;
     top: 50%;
@@ -24,18 +33,18 @@ $modalWidth: 300px;           //弹窗宽度
     width: $modalWidth;
     margin-left: -$modalWidth / 2;
 }
-.modal-header{
+
+.modal-header {
     height: 40px;
-    border-radius: $modalRadius;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-radius: $modalRadius $modalRadius 0 0;
     background: $modalBg;
-    h3{
+    h3 {
         font-size: 18px;
         font-weight: normal;
         color: $titleColor;
     }
-    .close{
+
+    .close {
         position: absolute;
         right: 10px;
         top: 10px;
@@ -47,22 +56,23 @@ $modalWidth: 300px;           //弹窗宽度
         }
     }
 }
-.modal-main{
-    border: 1px solid $borderColor;
-    border-left: 0;
-    border-right: 0;
+
+.modal-main {
+    border: solid $borderColor;
+    border-width: 0 1px 0;
     background: $modalBg;
 }
-.modal-footer{
-    border-radius: $modalRadius;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+
+.modal-footer {
+    border-radius: 0 0 $modalRadius $modalRadius;
     background: $modalBg;
 }
-.modal-submit{
+
+.modal-submit {
     @include btnStyle('me', 'blue');
 }
-.modal-cancel{
+
+.modal-cancel {
     @include btnStyle('sm', 'white');
     margin-left: 15px;
 }
