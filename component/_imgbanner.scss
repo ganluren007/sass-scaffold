@@ -1,11 +1,18 @@
-// 变量
-//---------------------------------
+/*
+ * ---------------------------------
+ * img banner
+ * ---------------------------------
+ */
+
+
+/* 变量 */
+/* --------------------------------- */
 $imgBannerHeight: 30px;
 
 
-// 样式
-//---------------------------------
-.img-mask{
+/* 样式 */
+/* --------------------------------- */
+.img-mask {
     @include opacity(50);
     position: absolute;
     left: 0;
@@ -14,7 +21,8 @@ $imgBannerHeight: 30px;
     height: $imgBannerHeight;
     background: #000;
 }
-.img-desc{
+
+.img-desc {
     position: absolute;
     left: 0;
     right: 0;

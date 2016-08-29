@@ -1,13 +1,20 @@
-// 变量
-//---------------------------------
+/*
+ * ---------------------------------
+ * alert
+ * ---------------------------------
+ */
+
+
+/* 变量 */
+/* --------------------------------- */
 $inputFontSize: 14px;
 $inputWidth: 150px 100px;
 $inputHeight: 40px;
-$inputPaddingtop: ($inputHeight - $inputSize) / 2 - 2;  //兼容IE8及以下文字没有垂直居中的问题
+$inputPaddingtop: ($inputHeight - $inputSize) / 2 - 2; /* 兼容IE8及以下文字没有垂直居中的问题*/
 
 
-// mixin
-//---------------------------------
+/* mixin */
+/* --------------------------------- */
 @mixin inputSize($size) {
     border: 1px solid $borderColor;
     @if $size == 'lg' {
@@ -19,8 +26,7 @@ $inputPaddingtop: ($inputHeight - $inputSize) / 2 - 2;  //兼容IE8及以下文�
             padding-left: 10px;
             height: $inputHeight;
         }
-    }
-    @else if $size == 'sm' {
+    } @else if $size == 'sm' {
         width: nth($inputWidth, 2);
         @if $lte8 {
             height: $inputFontSize + 4px;
@@ -33,43 +39,50 @@ $inputPaddingtop: ($inputHeight - $inputSize) / 2 - 2;  //兼容IE8及以下文�
 }
 
 
-// 样式
-//---------------------------------
-.input-wrapper{
+/* 样式 */
+/* --------------------------------- */
+.input-wrapper {
     position: relative;
 }
-input{
-    &:focus{
+
+input {
+    &:focus {
         box-shadow: 0 0 4px $mainColor;
     }
 }
-.input-lg{
+
+.input-lg {
     @include inputSize('lg');
 }
-.input-sm{
+
+.input-sm {
     @include inputSize('sm');
 }
-.input-text{
+
+.input-text {
     font-size: $inputFontSize;
 }
-.input-ph{
+
+.input-ph {
     position: absolute;
     top: 0;
     left: 20px;
     font-size: $inputFontSize;
     color: #999;
 }
-.label-group{
+
+.label-group {
     margin-right: 10px;
-    .checkbox{
+    .checkbox {
         float: left;
         width: 20px;
         height: 20px;
         background: url();
-        &.on{
+        &.on {
             background-position: 0 0;
         }
     }
+
     label{
         float: left;
         margin-left: 10px;

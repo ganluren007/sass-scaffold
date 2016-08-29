@@ -1,10 +1,17 @@
-// 变量
-//---------------------------------
-$slideBtnOoffset: 0;  //轮播左右切换按钮离边缘的偏移量
+/*
+ * ---------------------------------
+ * carousel
+ * ---------------------------------
+ */
 
 
-// placeholder
-//---------------------------------
+/* 变量 */
+/* --------------------------------- */
+$slideBtnOoffset: 0; /* 轮播左右切换按钮离边缘的偏移量 */
+
+
+/* placeholder */
+/* --------------------------------- */
 %slide-btn{
     position: absolute;
     top: 50%;
@@ -15,19 +22,21 @@ $slideBtnOoffset: 0;  //轮播左右切换按钮离边缘的偏移量
 }
 
 
-// 样式
-//---------------------------------
+/* 样式 */
+/* --------------------------------- */
 .slide{
     .btn-left{
         @extend %slide-btn;
         left: $slideBtnOoffset;
     }
+
     .btn-right{
         @extend %slide-btn;
         right: $slideBtnOoffset;
     }
 }
-.pagination{
+
+.pagination {
     position: absolute;
     left: 0;
     right: 0;
