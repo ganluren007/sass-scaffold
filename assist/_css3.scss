@@ -75,26 +75,26 @@ $prefixer-transform: '', '-webkit-', '-moz-', '-o-', '-ms-';
 }
 
 /* box shadow */
-@include boxShadow($style...) {
+@mixin boxShadow($style...) {
   box-shadow: $style;
   -webkit-box-shadow: $style;
 }
 
 /* text shadow */
-@include textShadow($style...) {
+@mixin textShadow($style...) {
   text-shadow: $style;
   -webkit-text-shadow: $style;
 }
 
 /* linear gradient */
-@include linear($style) {
+@mixin linear($style) {
   background: linear-gradient($style);
   background: -webkit-linear-gradient($style);
   background: -moz-linear-gradient($style);
 }
 
 /* radial gradient */
-@include radial($style) {
+@mixin radial($style) {
   background: radial-gradient($style);
   background: -webkit-radial-gradient($style);
   background: -moz-radial-gradient($style);

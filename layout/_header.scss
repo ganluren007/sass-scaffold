@@ -1,34 +1,44 @@
-// 变量
-//---------------------------------
+/*
+ * ---------------------------------
+ * header
+ * ---------------------------------
+ */
+
+
+/* 变量 */
+/* --------------------------------- */
 $headerHeight: 80px;
 
 
-// 样式
-//---------------------------------
-.header{
+/* 样式 */
+/* --------------------------------- */
+.header {
 	height: $headerHeight;
 }
-.logo{
+
+.logo {
 	float: left;
 	width: 200px;
 	height: 100px;
 	background: url();
-	a{
+	a {
 		display: block;
 		width: 100%;
 		height: 100%;
 	}
 }
-.nav{
+
+.nav {
 	margin-left: 50px;
-	li{
+	li {
 		float: left;
 		line-height: $headerHeight;
 	}
-	a{
+
+	a {
 		font-size: 16px;
 		color: #333;
-		&:hover{
+		&:hover {
 			color: $mainColor;
 		}
 	}
