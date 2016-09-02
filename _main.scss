@@ -1,18 +1,30 @@
-//base
-@import "base/reset";
-@import "base/base";
+/*
+ * ---------------------------------
+ * main
+ * ---------------------------------
+ */
 
-//vendor
 
-//assist
+/* import */
+/* --------------------------------- */
+
+/* assist */
 @import "assist/variable";
 @import "assist/mixin";
 @import "assist/animation";
 @import "assist/css3";
 @import "assist/zindex";
 
-//component
+/* base */
+@import "base/reset";
+@import "base/base";
 
-//layout
+/* component */
+
+/* layout */
+@import "layout/common";
 @import "layout/header";
 @import "layout/footer";
+
+/* media */
+@import "assist/media";

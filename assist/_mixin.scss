@@ -39,7 +39,7 @@
 	}
 }
 
-/* 文字水平垂直方向居中 */
+/* 单行文字水平垂直方向居中 */
 @mixin textCenter($width, $height, $display: null) {
 	display: $display;
 	width: $width;
@@ -47,6 +47,13 @@
 	text-align: center;
 	line-height: $height;
 }
+
+/* 单行文字垂直方向居中 */
+@mixin textMiddle($height) {
+    height: $height;
+    line-height: $height;
+}
+
 
 /* 块状内容水平垂直方向居中 */
 @mixin blockCenter($position: absolute) {

@@ -5,15 +5,10 @@
  */
 
 
-/* 变量 */
-/* --------------------------------- */
-$headerHeight: 80px;
-
-
 /* 样式 */
 /* --------------------------------- */
 .header {
-	height: $headerHeight;
+	@include textMiddle(80px);
 }
 
 .logo {
@@ -32,7 +27,6 @@ $headerHeight: 80px;
 	margin-left: 50px;
 	li {
 		float: left;
-		line-height: $headerHeight;
 	}
 
 	a {

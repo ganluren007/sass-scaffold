@@ -12,7 +12,6 @@
 }
 
 .copyright {
-    height: 30px;
-    line-height: 30px;
+    @include textMiddle(30px);
     text-align: center;
 }

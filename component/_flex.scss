@@ -7,29 +7,91 @@
 
 /* 变量 */
 /* --------------------------------- */
-$flexMargin: 20px 20px;
+$flexMarginH: 24px;
+$flexMarginV: 24px;
 
 
 /* 样式 */
 /* --------------------------------- */
-.flex{}
-.flex-top{
+.flex {}
+
+.flex-left,
+.flex-right {
+    position: absolute;
+    top: 0;
+    width: $flexMarginH;
+}
+
+.flex-center {
+    margin: 0 $flexMarginH;
+}
+
+.flex-left {
+    left: 0;
+}
+
+.flex-right {
+    right: 0;
+}
+
+.flex-top {
+    position: relative;
     .flex-left,
-    .flex-right{
-        width: nth($flexMargin, 1);
-        height: nth($flexMargin, 2);
+    .flex-right {
+        height: $flexMarginV;
+    }
+
+    .flex-left {
+        background-position:  ;
+    }
+
+    .flex-right {
+        background-position: ;
+    }
+
+    .flex-center {
+        height: $flexMarginV;
+        background: url() top center;
     }
 }
-.flex-middle{
+
+.flex-middle {
+    position: relative;
     .flex-left,
-    .flex-right{
-        width: nth($flexMargin, 1);
+    .flex-right {
+        height: 100%;
+    }
+
+    .flex-left {
+        background: url();
+    }
+
+    .flex-right {
+        background: url();
+    }
+
+    .flex-center {
+        background: url();
     }
 }
-.flex-bottom{
+
+.flex-bottom {
+    position: relative;
     .flex-left,
-    .flex-right{
-        width: nth($flexMargin, 1);
-        height: nth($flexMargin, 2);
+    .flex-right,
+    .flex-center {
+        height: 15px;
+    }
+
+    .flex-left {
+        background-position: ;
+    }
+
+    .flex-right {
+        background-position: ;
+    }
+
+    .flex-center {
+        background: url();
     }
 }
