@@ -7,8 +7,8 @@
 
 /* 变量 */
 /* --------------------------------- */
-$prefixer : '', '-webkit-', '-moz-', '-o-';
-$prefixer-transform: '', '-webkit-', '-moz-', '-o-', '-ms-';
+$prefixer : '', '-webkit-';
+$prefixer-transform: '', '-webkit-', '-ms-';
 
 
 /* mixin */
