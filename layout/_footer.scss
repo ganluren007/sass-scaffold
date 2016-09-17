@@ -11,6 +11,13 @@
     background: #eee;
 }
 
+.sponsor {
+    text-align: center;
+    li {
+        display: inline-block;
+    }
+}
+
 .copyright {
     @include textMiddle(30px);
     text-align: center;

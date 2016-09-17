@@ -8,13 +8,11 @@
 /* 变量 */
 /* --------------------------------- */
 $flexMarginH: 24px;
-$flexMarginV: 24px;
+$flexMarginV: 24px 20px;
 
 
 /* 样式 */
 /* --------------------------------- */
-.flex {}
-
 .flex-left,
 .flex-right {
     position: absolute;
@@ -38,7 +36,7 @@ $flexMarginV: 24px;
     position: relative;
     .flex-left,
     .flex-right {
-        height: $flexMarginV;
+        height: nth($flexMarginV, 1);
     }
 
     .flex-left {
@@ -50,7 +48,7 @@ $flexMarginV: 24px;
     }
 
     .flex-center {
-        height: $flexMarginV;
+        height: nth($flexMarginV, 1);
         background: url() top center;
     }
 }
@@ -80,7 +78,7 @@ $flexMarginV: 24px;
     .flex-left,
     .flex-right,
     .flex-center {
-        height: 15px;
+        height: nth($flexMarginV, 2);
     }
 
     .flex-left {

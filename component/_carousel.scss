@@ -12,7 +12,8 @@ $slideBtnOoffset: 0; /* 轮播左右切换按钮离边缘的偏移量 */
 
 /* placeholder */
 /* --------------------------------- */
-%slide-btn{
+%slide-btn {
+    @include transform(translateY(-50%));
     position: absolute;
     top: 50%;
     margin-left: -35px;
@@ -36,8 +37,6 @@ $slideBtnOoffset: 0; /* 轮播左右切换按钮离边缘的偏移量 */
         right: $slideBtnOoffset;
     }
 }
-
-.slide-wrapper {}
 
 .pagination {
     position: absolute;

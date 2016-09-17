@@ -99,9 +99,3 @@
     height: $size;
     border-radius: 50%;
 }
-
-/* 多行文字垂直居中 */
-%paraMiddle {
-    display: table-cell;
-    vertical-align: middle;
-}

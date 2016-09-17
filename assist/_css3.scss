@@ -7,8 +7,10 @@
 
 /* 变量 */
 /* --------------------------------- */
+
+/* 浏览器前缀只支持webkit和ms的，moz和o不支持 */
 $prefixer : '', '-webkit-';
-$prefixer-transform: '', '-webkit-', '-ms-';
+$prefixerTransform: '', '-webkit-', '-ms-';
 
 
 /* mixin */
@@ -16,14 +18,14 @@ $prefixer-transform: '', '-webkit-', '-ms-';
 
 /* transform */
 @mixin transform($action) {
-  @each $pre in $prefixer-transform {
+  @each $pre in $prefixerTransform {
     #{$pre}transform: $action;
   }
 }
 
 /* transform-origin */
 @mixin transformOrigin($style) {
-  @each $pre in $prefixer-transform {
+  @each $pre in $prefixerTransform {
     #{$pre}transform-origin: $style;
   }
 }
@@ -68,7 +70,7 @@ $prefixer-transform: '', '-webkit-', '-ms-';
 }
 
 /* text overflow: ellipsis */
-%textOverflow {
+@include textOverflow() {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -76,26 +78,49 @@ $prefixer-transform: '', '-webkit-', '-ms-';
 
 /* box shadow */
 @mixin boxShadow($style...) {
-  box-shadow: $style;
-  -webkit-box-shadow: $style;
-}
-
-/* text shadow */
-@mixin textShadow($style...) {
-  text-shadow: $style;
-  -webkit-text-shadow: $style;
+  @each $pre in $prefixer {
+    #{$pre}box-shadow: $style;
+  }
 }
 
 /* linear gradient */
 @mixin linear($style) {
-  background: linear-gradient($style);
-  background: -webkit-linear-gradient($style);
-  background: -moz-linear-gradient($style);
+  @each $pre in $prefixer {
+    background: #{$pre}linear-gradient($style);
+  }
 }
 
 /* radial gradient */
 @mixin radial($style) {
-  background: radial-gradient($style);
-  background: -webkit-radial-gradient($style);
-  background: -moz-radial-gradient($style);
+  @each $pre in $prefixer {
+    background: #{$pre}radial-gradient($style);
+  }
+}
+
+/* font face */
+@mixin fontFace($fontFamily, $filePath, $weight: normal, $style: normal ) {
+  @font-face {
+    font-family: $fontFamily;
+    font-weight: $weight;
+    font-style: $style;
+    src: url('#{$filePath}.eot'); // 1
+    src: url('#{$filePath}.eot?#iefix') format('eot'), // 2
+         url('#{$filePath}.svg##{$font-family}') format('svg'), // 3
+         url('#{$filePath}.woff') format('woff'), // 4
+         url('#{$filePath}.ttf') format('truetype'); //5
+  }
+}
+
+/* flex */
+@mixin flex($style) {
+  @each $pre in $prefixer {
+    #{$pre}flex: $style;
+  }
+}
+
+/* flex-flow */
+@mixin flexFlow($style) {
+   @each $pre in $prefixer {
+    #{$pre}flex-flow: $style;
+  }
 }

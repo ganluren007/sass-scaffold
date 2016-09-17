@@ -26,18 +26,19 @@ $modalWidth: 300px;           /* 弹窗宽度 */
 }
 
 .modal{
+    @include transform(translate(-50%, -50%));
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: z('modal');
     width: $modalWidth;
     margin-left: -$modalWidth / 2;
+    background: $modalBg;
 }
 
 .modal-header {
     height: 40px;
     border-radius: $modalRadius $modalRadius 0 0;
-    background: $modalBg;
     h3 {
         font-size: 18px;
         font-weight: normal;
@@ -60,12 +61,11 @@ $modalWidth: 300px;           /* 弹窗宽度 */
 .modal-main {
     border: solid $borderColor;
     border-width: 0 1px 0;
-    background: $modalBg;
 }
 
 .modal-footer {
+    height: 40px;
     border-radius: 0 0 $modalRadius $modalRadius;
-    background: $modalBg;
 }
 
 .modal-submit {

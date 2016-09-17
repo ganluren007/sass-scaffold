@@ -13,9 +13,12 @@ $lte7: true;                  /* 最低兼容IE7 */
 $lte8: true;                  /* 最低兼容IE8 */
 
 /* 颜色 */
-$mainColor: #169fe6;          /* 主要的颜色 */
-$mainHoverColor: #1481b9;     /* 主要的二态颜色 */
-$titleColor: #333;            /* 标题的颜色 */
-$contentColor: #666;          /* 内容的颜色 */
-$borderColor: #eee;           /* 边框的颜色 */
-$disabledColor: #ccc;         /* 无法使用的颜色 */
+$mainColor: #169fe6;
+$mainHoverColor: lighten($mainColor, 5%);
+$mainActiveColor: darken($mainColor, 5%);
+$titleColor: #333;
+$contentColor: #666;
+$borderColor: #eee;
+$border: 1px solid $borderColor;
+$bgColor: #eee;
+$disabledColor: #ccc;

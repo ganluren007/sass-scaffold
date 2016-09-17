@@ -5,11 +5,30 @@
  */
 
 
+/* mixin */
+/* --------------------------------- */
+@mixin zebraLine($oddColor, $evenColor) {
+    tr {
+        &:nth-child(odd) {
+            background: $oddColor;
+        }
+        &:nth-child(even) {
+            background: $evenColor
+        }
+    }
+}
+
+
 /* 样式 */
 /* --------------------------------- */
+table {
+    table-layout: fixed;
+    margin: 0 10px;
+}
+
 th,
 td {
     padding: 10px;
-	border: 1px solid #999;
+	border: $border;
 	vertical-align: middle;
 }
