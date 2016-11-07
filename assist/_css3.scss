@@ -70,7 +70,7 @@ $prefixerTransform: '', '-webkit-', '-ms-';
 }
 
 /* text overflow: ellipsis */
-@include textOverflow() {
+@mixin textOverflow() {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
